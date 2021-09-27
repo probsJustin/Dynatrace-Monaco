@@ -1,0 +1,104 @@
+{
+  "displayName": "{{.name}}",
+  "managementZoneId": "{{.managementZoneId}}",
+  "mzId": "{{.managementZoneId}}",
+  "rules": [
+    {
+      "severityLevel": "MONITORING_UNAVAILABLE",
+      "tagFilter": {
+        "includeMode": "INCLUDE_ALL",
+        "tagFilters": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "{{.autoTaggingRuleTagName}}"
+          }
+        ]
+      },
+      "delayInMinutes": 0
+    },
+    {
+      "severityLevel": "AVAILABILITY",
+      "tagFilter": {
+        "includeMode": "INCLUDE_ALL",
+        "tagFilters": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "{{.autoTaggingRuleTagName}}"
+          }
+        ]
+      },
+      "delayInMinutes": 0
+    },
+    {
+      "severityLevel": "PERFORMANCE",
+      "tagFilter": {
+        "includeMode": "INCLUDE_ALL",
+        "tagFilters": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "{{.autoTaggingRuleTagName}}"
+          }
+        ]
+      },
+      "delayInMinutes": 0
+    },
+    {
+      "severityLevel": "RESOURCE_CONTENTION",
+      "tagFilter": {
+        "includeMode": "INCLUDE_ALL",
+        "tagFilters": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "{{.autoTaggingRuleTagName}}"
+          }
+        ]
+      },
+      "delayInMinutes": 0
+    },
+    {
+      "severityLevel": "CUSTOM_ALERT",
+      "tagFilter": {
+        "includeMode": "INCLUDE_ALL",
+        "tagFilters": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "{{.autoTaggingRuleTagName}}"
+          }
+        ]
+      },
+      "delayInMinutes": 0
+    },
+    {
+      "severityLevel": "ERROR",
+      "tagFilter": {
+        "includeMode": "INCLUDE_ALL",
+        "tagFilters": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "{{.autoTaggingRuleTagName}}"
+          }
+        ]
+      },
+      "delayInMinutes": 0
+    }
+  ],
+  "eventTypeFilters": [
+    {
+      "predefinedEventFilter": {
+        "eventType": "PROCESS_NA_HIGH_CONN_FAIL_RATE",
+        "negate": true
+      }
+    },
+    {
+      "customEventFilter": {
+        "customTitleFilter": {
+          "enabled": true,
+          "value": "kube-proxy",
+          "operator": "CONTAINS",
+          "negate": true,
+          "caseInsensitive": true
+        }
+      }
+    }
+  ]
+}

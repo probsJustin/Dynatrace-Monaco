@@ -1,0 +1,8 @@
+
+config:
+  - profile: "profile.json"
+
+profile:
+  - name: "Infrastructure"
+  - autoTaggingRuleTagName: "/infrastructure/auto-tag/infra-tagging.name"
+  - managementZoneId: "/infrastructure/management-zone/zone.id"

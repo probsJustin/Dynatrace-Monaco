@@ -1,0 +1,40 @@
+
+# Environments file for Dynatrace Monaco
+# https://github.com/dynatrace-oss/dynatrace-monitoring-as-code
+
+# Here are some of the examples that are provided in the documenation: 
+# https://dynatrace-oss.github.io/dynatrace-monitoring-as-code/configuration/environments_file
+
+
+# foo:
+#     - name: "foo"
+#     - env-url: "https://foo.example.com"
+#     - env-token-name: "FOO_TOKEN_ENV_VAR" 
+
+# bar:
+#     - name: "bar"
+#     - env-url: "https://bar.dynatrace-managed.com/e/environmentid"
+#     - env-token-name: "BAR_TOKEN_ENV_VAR"
+
+local: 
+    - name: "dev-local"
+    - env-url: "null"
+    - env-token-name: "DEV_LOCAL_TOKEN_ENV_VAR"
+
+dev: 
+    - name: "dev"
+    - env-url: "null"
+    - env-token-name: "DEV_TOKEN_ENV_VAR"
+
+hardening: 
+    - name: "hardening"
+    - env-url: "null"
+    - env-token-name: "HARDENING_TOKEN_ENV_VAR"
+
+
+# Note: prod only allows deployment from the jenkins pipeline due to how security and permissions issues
+# prod: 
+#    - name: "prod"
+#    - env-url: "null"
+#    - env-token-name: "PROD_TOKEN_ENV_VAR"
+    
